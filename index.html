@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .section p {
+            margin-top: 10px;
+        }
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #333;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-content {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .timeline-content h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            background-color: #e0e0e0;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            background-color: #999;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #333;
+            z-index: 1;
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .timeline:before {
+                left: 20px;
+            }
+            .timeline-item {
+                margin-bottom: 20px;
+            }
+            .timeline-content {
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Personal Website</h1>
+        </header>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I'm Jack Decker, a sophomore at the University of Notre Dame, majoring in Computer Engineering with a minor in Engineering Corporate Practice. I was born and raised in the Chicagoland area, living near Wrigley Field most of my life, except for a few years when I lived in a Northwest suburb of Chicago. 
+                I've always had a passion for coding but I enjoy supplementing this with more technical and hardware areas such as microarchitecture and embedded systems. I also recognize the significance that business and economics concepts play in the tech industry and enjoy studying their relation to CS and tech.
+                Besides my academic pursuits, I enjoy watching and playing sports. I've been a huge Notre Dame football fan my entire life, so you can always find me watching all of their games. My other favorite sports are Lacrosse and Baseball, which is one reason why living near Wrigley Field is so great, lots of opportunities to go watch the Chicago Cubs play. I enjoy traveling and have been to 15+ national parks across North America. I am also studying abroad this summer in Berlin and then studying next semester in Dublin in the fall of 2024. During the winters I like to ski even if it’s at the tiny “mountains” in the Midwest.
+            </p>
+        </section>
+        <section id="timeline" class="section">
+            <h2>Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Fall 2018 - Spring 2022: Lane Tech High School</h3>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Fall 2022 - Spring 2026: University of Notre Dame</h3>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Spring 2023: Business Research Assistant with Mike Mannor</h3>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>May 2024 - July 2024: Berlin Summer Engineering</h3>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Fall 2024: Study Abroad Dublin City University</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of project 1.</p>
+                <p><a href="#">Link to project 1</a></p> <!-- or provide a valid URL -->
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of project 2.</p>
+                <p><a href="#">Link to project 2</a></p> <!-- or provide a valid URL -->
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact
